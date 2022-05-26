@@ -2,17 +2,23 @@ p {
     color: orange;
 }
 h1{color: green;}
+h1{text-align: right;}
 h2 {color: blue;}
+h2{text-align: center;}
 h3 { color: brown}
 p {
     color: rgb(0,171,111);
 }
 td{
-    width: 400px;
-    height: 300px;
+    width: 300px;
+    height: 30px;
+}
+
+th{
+    text-align: left;
 }
 p{
-    width: 300px;
+    width: 500px;
     text-align: justify;
 }
 table{text-align: center;
