@@ -3,8 +3,11 @@ p {
 }
 h1{color: green;}
 h1{text-align: right;}
-h2 {color: blue;}
+h2 {color: blue;
+width: 300;
+text-align: center;}
 h2{text-align: center;}
+h2{font-style: italic;}
 h3 { color: brown}
 p {
     color: rgb(0,171,111);
