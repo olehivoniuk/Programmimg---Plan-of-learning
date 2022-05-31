@@ -8,7 +8,8 @@ h2 {color: blue;
 width: 300;
 text-align: center;}
 h2{text-align: center;}
-h2{font-style: italic;}
+h2{font-style: italic;
+font-size: 40px;}
 h3 { color: brown}
 p {
     color: rgb(0,171,111);
