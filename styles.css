@@ -9,11 +9,11 @@ text-align: center;
 font: italic normal 13px/20px New Times Roman ; }
 h3 { color: brown}
 p {
-    color: rgb(0,171,111);
+    color: rgb(94, 24, 8);
     width: 1200px;
     text-align: justify;
-    font-size: 30px;
-    line-height: 1.5;
+    font: italic bold 40px/60px Arial;
+    text-indent: 50px;
 }
 td{
     width: 300px;
