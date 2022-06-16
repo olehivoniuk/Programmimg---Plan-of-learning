@@ -7,8 +7,12 @@ h2{
     color: green;
 width: 400px;
 text-align: center;
-font-weight: normal;
+font-weight: normal;}
 
 
 p{ text-align: center;
-width: 500px;}
+width: 500px;
+font: 12/16px Arial;}
+li{
+    width: 350px;
+}
