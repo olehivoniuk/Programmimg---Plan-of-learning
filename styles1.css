@@ -1,2 +1,3 @@
-.block1 {color: red}
-.block2 {color: green;}
+.block1 .block2 {
+    font-size: 20p/1.5 Arial;
+}
