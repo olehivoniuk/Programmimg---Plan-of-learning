@@ -1,1 +1,7 @@
-p .bbb{color: red;}
+.error {
+	color: red;
+}
+.large {
+	font-size: 30px;
+	font-family: Arial;
+}
