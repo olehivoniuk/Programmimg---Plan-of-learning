@@ -1,4 +1,4 @@
-.success .small{color: green;}
-.error .large{color: red;}
-.success .lagre{font-size: 30px;}
-.error .small{font-size: 20px;}
+.success.small{color: green;}
+.error.large{color: red;}
+.success.lagre{font-size: 30px;}
+.error.small{font-size: 20px;}
