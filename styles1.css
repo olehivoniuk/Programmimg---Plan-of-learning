@@ -1,14 +1,8 @@
-.success {
-	color: green;
-    font-size: 30px;
+.hello{
+    font-size: 50px;
+    color: green;
 }
-.error {
-	color: red;
-    font-size: 20px;
-}
-.large { color: red;
-	font-size: 30px;
-}
-.small { color: green;
-	font-size: 20px;
-}
+.hell{font-weight: bold;
+font-family: Arial;
+color: blue;}
+.hi{ font: 15px/27px Arial}
