@@ -3,6 +3,5 @@
     color: green;
 }
 .hell{font-weight: bold;
-font-family: Arial;
-color: blue;}
-.hi{ font: 15px/27px Arial}
+font-family: Arial;}
+.hi{font-weight: 100; }
