@@ -1,7 +1,6 @@
-.hello{
-    font-size: 50px;
-    color: green;
+#block1 {
+	color: red;
 }
-.hell{font-weight: bold;
-font-family: Arial;}
-.hi{font-weight: 100; }
+#block2 {
+	color: green;
+}
