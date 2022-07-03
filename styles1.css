@@ -1,3 +1,1 @@
-#block h1.eee, #block h2.zzz {text-align: center;}
-#block h1.eee {font-size: 30px;}
-#block h2.zzz P{font: size 20px;}
+.eee h2.zzz, .xxx { text-align: center;}
