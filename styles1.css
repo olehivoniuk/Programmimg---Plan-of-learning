@@ -1,1 +1,2 @@
- .fff p {color: red;}
+ #block p.fff, p.fff {color: red;}
+ 
