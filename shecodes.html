@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -67,9 +67,15 @@
       <button>Apply Now</button>
     </section>
     <script>
-      let firstName = prompt("What is your first name?");
-      let lastName = prompt("What is your lates name?");
-      alert("Your name is " + firstName + " " + lastName);
+      let language = prompt("What county are  you from ? ");
+
+      let language = language.toLowerCase().trim();
+
+      if (language === "portugal" || language === "brazil") {
+        alert("You can speak Portuguese");
+      } else {
+        alert("Go learn portuguese");
+      }
     </script>
   </body>
 </html>
