@@ -67,14 +67,14 @@
       <button>Apply Now</button>
     </section>
     <script>
-      let language = prompt("What county are  you from ? ");
+      let country = prompt("What country are you from?");
 
-      let language = language.toLowerCase().trim();
+      country = country.toLowerCase().trim();
 
-      if (language === "portugal" || language === "brazil") {
-        alert("You can speak Portuguese");
+      if (country === "brazil" || country === "portugal") {
+        alert("You speak Portuguese");
       } else {
-        alert("Go learn portuguese");
+        alert("Learn Portuguese!");
       }
     </script>
   </body>
