@@ -66,6 +66,24 @@
       <br />
       <button>Apply Now</button>
     </section>
-    <script></script>
+    <script>
+      function yourCountry() {
+        let country = prompt("What county are you from ?");
+        country = country.toLowerCase();
+        country = country.trim();
+        country = country.replace("brasil", "brazil");
+        if (
+          country === "Portugal" ||
+          country === "brazil" ||
+          country === "portugal"
+        ) {
+          alert("You can speak Portuguese!");
+        } else {
+          alert("Go learn portugues");
+        }
+      }
+
+      yourCountry();
+    </script>
   </body>
 </html>
