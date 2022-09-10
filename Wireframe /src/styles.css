@@ -1,0 +1,40 @@
+.precipitation {
+    color: green;
+    margin-top: 60px;
+}
+.heading{
+    color: antiquewhite;
+    position: relative;
+    bottom: 500px;
+    left: 70px;
+    
+}
+.body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.row1{
+
+    position: relative;
+    bottom: 700px;
+    left: 800px;
+    color: antiquewhite;
+}
+.card{
+    margin-top: 50px;
+}
+.row{
+    position: relative; 
+    left: 50px;
+    bottom: 300px;
+    color: antiquewhite;
+}
+img{
+    position: relative;
+    top: 100px;
+    background-size: cover;
+    overflow: hidden;
+    max-height: 700px;
+    max-width: 1060px;
+    border-radius: 30px;
+}
+
