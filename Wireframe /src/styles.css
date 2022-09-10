@@ -1,9 +1,9 @@
 .precipitation {
-    color: green;
+    color: gold;
     margin-top: 60px;
 }
 .heading{
-    color: antiquewhite;
+    color: gold;
     position: relative;
     bottom: 500px;
     left: 70px;
@@ -37,4 +37,13 @@ img{
     max-width: 1060px;
     border-radius: 30px;
 }
-
+.day{
+    color: gold;
+    background-color:seagreen;
+    border: none;
+    border-radius: 5px;
+    opacity: 0,1;
+}
+.day:hover{
+    transition: all 0.9ms ease-in-out;
+}
