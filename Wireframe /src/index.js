@@ -21,24 +21,25 @@ let weather = {
     }
   };
   
+   
   
    let city  = prompt(" Enter a city ?");
   if (city === "paris") {
-      alert(" It is currenty " + weather.paris.temp + "°" + " in " + city + " with a humidity of " + weather.paris.humidity + " %"  );
+      alert(" It is currenty " + Math.round(weather.paris.temp) + "°" + " in " + city + " with a humidity of " + weather.paris.humidity + " %"  );
   }
   
   else { if (city === "tokyo"){
-      alert( " It is currenty " + weather.tokyo.temp + "°" + " in " + city + " with a humidity of " + weather.tokyo.humidity + " %" );
+      alert( " It is currenty " + Math.round(weather.tokyo.temp) + "°" + " in " + city + " with a humidity of " + weather.tokyo.humidity + " %" );
   } 
   
   else { if (city === "lisbon") {
-    alert( " It is currenty " + weather.lisbon.temp + "°" + " in " + city + " with a humidity of " + weather.lisbon.humidity + " %" );
+    alert( " It is currenty " + Math.round(weather.lisbon.temp) + "°" + " in " + city + " with a humidity of " + weather.lisbon.humidity + " %" );
   } 
   
   else { if(city === "oslo"){
-    alert( " It is currenty " + weather.oslo.temp + "°" + " in " + city + " with a humidity of " + weather.oslo.humidity + " %" );
+    alert( " It is currenty " + Math.round(weather.oslo.temp) + "°" + " in " + city + " with a humidity of " + weather.oslo.humidity + " %" );
   } else { if(city === "san francisco"){
-    alert( " It is currenty " + weather.sanFrancisco.temp + "°" + " in " + city + " with a humidity of " + weather.sanFrancisco.humidity + " %" );
+    alert( " It is currenty " + Math.round(weather.sanFrancisco.temp) + "°" + " in " + city + " with a humidity of " + weather.sanFrancisco.humidity + " %" );
   }
   
   
@@ -50,4 +51,3 @@ let weather = {
 }
   }
 }
-temp = Math.round(temp);
