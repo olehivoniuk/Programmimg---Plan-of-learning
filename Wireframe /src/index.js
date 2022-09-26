@@ -11,7 +11,7 @@ let weather = {
       temp: 30.2,
       humidity: 20
     },
-    "san francisco": {
+    sanFrancisco: {
       temp: 20.9,
       humidity: 100
     },
@@ -21,8 +21,8 @@ let weather = {
     }
   };
   
+  
    let city  = prompt(" Enter a city ?");
-    weather["san francisco"] = "san francisco"
   if (city === "paris") {
       alert(" It is currenty " + weather.paris.temp + "°" + " in " + city + " with a humidity of " + weather.paris.humidity + " %"  );
   }
@@ -38,7 +38,7 @@ let weather = {
   else { if(city === "oslo"){
     alert( " It is currenty " + weather.oslo.temp + "°" + " in " + city + " with a humidity of " + weather.oslo.humidity + " %" );
   } else { if(city === "san francisco"){
-    alert( " It is currenty " + weather["san francisco"].temp + "°" + " in " + city + " with a humidity of " + weather["san francisco"].humidity + " %" );
+    alert( " It is currenty " + weather.sanFrancisco.temp + "°" + " in " + city + " with a humidity of " + weather.sanFrancisco.humidity + " %" );
   }
   
   
@@ -50,4 +50,4 @@ let weather = {
 }
   }
 }
-
+temp = Math.round(temp);
