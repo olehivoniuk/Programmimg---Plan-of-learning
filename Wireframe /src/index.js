@@ -4,4 +4,4 @@ let hours = now.getHours();
 let day = now.getDay();
 
 let lineDate = document.querySelector("#currentTime")
-lineDate.innerHTML = day + hours
+lineDate.innerHTML =  hours;
