@@ -1,3 +1,10 @@
+#citySearch{
+    position: relative;
+    bottom: 670px;
+    left: 70px;
+}
+
+
 .precipitation {
     color: gold;
     margin-top: 60px;
@@ -5,15 +12,16 @@
 .heading{
     color: gold;
     position: relative;
-    bottom: 500px;
+    bottom: 400px;
     left: 70px;
     
 }
 .time{
     color: aqua;
     position: relative;
-    bottom: 550px;
+    bottom: 450px;
     left: 70px;
+    font-size: 22px;
 }
 .body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -31,7 +39,7 @@
 .row{
     position: relative; 
     left: 50px;
-    bottom: 300px;
+    bottom: 350px;
     color: antiquewhite;
 }
 img{
