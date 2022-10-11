@@ -10,10 +10,14 @@ lineDate.innerHTML = day + " " + hours + ":" + minutes;
 
 function search (event){
     event.preventDefault();
-    let citytInput = document.querySelector("#currentCity")
-}
-if (form){
-    innerHTML.h3 = citytInput ; 
+    let seacrhInput = document.querySelector("#dataInput");
+    let h3 = document.querySelector("h3");
+    if (seacrhInput.value){
+        h3.innerHTML = seacrhInput.value ;
+    } else {
+        alert("Please type the city")
+    }
+
 }
 let form = document.querySelector("#citySearch")
 form.addEventListener("submit", search)
