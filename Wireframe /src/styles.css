@@ -3,7 +3,12 @@
     bottom: 670px;
     left: 70px;
 }
-
+#currentCity{
+    position: relative;
+    left: 70px;
+    bottom: 540px;
+    color: aliceblue;
+}
 
 .precipitation {
     color: gold;
@@ -12,7 +17,7 @@
 .heading{
     color: gold;
     position: relative;
-    bottom: 400px;
+    bottom: 350px;
     left: 70px;
     
 }

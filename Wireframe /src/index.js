@@ -10,10 +10,10 @@ lineDate.innerHTML = day + " " + hours + ":" + minutes;
 
 function search (event){
     event.preventDefault();
-    let textInput = document.querySelector("#dataInput")
+    let citytInput = document.querySelector("#currentCity")
 }
 if (form){
-    innerHTML.currentCity = ("#dataInput")
+    innerHTML.h3 = citytInput ; 
 }
 let form = document.querySelector("#citySearch")
 form.addEventListener("submit", search)
