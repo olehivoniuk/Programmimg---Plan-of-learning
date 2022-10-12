@@ -21,3 +21,21 @@ function search (event){
 }
 let form = document.querySelector("#citySearch")
 form.addEventListener("submit", search)
+
+function switchTemp(event){
+    event.preventDefault();
+    let tempertarure = document.querySelector("#tempSwitcher") ;
+    tempertarure.innerHTML = "19" ;
+    
+}
+
+let tempCelcius = document.querySelector("#celcius");
+tempCelcius.addEventListener("click",switchTemp);
+
+function changeTemp(event){
+    event.preventDefault();
+    let degrees = document.querySelector("#tempSwitcher");
+    degrees.innerHTML = "63";
+}
+let tempFaringates = document.querySelector("#faringates");
+tempFaringates.addEventListener("click", changeTemp);
