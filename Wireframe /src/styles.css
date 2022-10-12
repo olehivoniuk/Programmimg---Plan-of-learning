@@ -66,3 +66,7 @@ img{
 .day:hover{
     transition: all 0.9ms ease-in-out;
 }
+a:link{
+    text-decoration: none;
+}
+    
