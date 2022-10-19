@@ -10,6 +10,13 @@
     color: aliceblue;
 }
 
+#currentLocation{
+    position: relative;
+    left: 380px;
+    bottom: 700px
+    
+}
+
 .precipitation {
     color: gold;
     margin-top: 60px;
