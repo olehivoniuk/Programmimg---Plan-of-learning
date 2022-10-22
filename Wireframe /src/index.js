@@ -29,12 +29,20 @@ function search (event){
         let weatherDescription = response.data.weather[0].description; 
         let chosenDescriontion = document.querySelector("#description")
         chosenDescriontion.innerHTML = weatherDescription; 
+        
         let temp = response.data.main.temp;
         let chosenTemp = document.querySelector("#tempSwitcher")
         chosenTemp.innerHTML =  Math.round(temp);
-        let chosenHumidity = document.querySelector("#humidity")
+    
         let weatherHumidity = response.data.main.humidity;
-        chosenHumidity.innerHtml = weatherHumidity; 
+        let chosenHumidity = document.querySelector("#humidity")
+        chosenHumidity.innerHTML = weatherHumidity; 
+
+        let windSpeed = response.data.wind.speed;
+        console.log(windSpeed)
+        let chosenSpeed = document.querySelector("#speed")
+        chosenSpeed.innerHTML = Math.round(windSpeed);
+
 
     }
     axios.get(apiUrl).then(showTemperature);
