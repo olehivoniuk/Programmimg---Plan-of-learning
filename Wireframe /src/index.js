@@ -25,10 +25,16 @@ function search (event){
     let apiUrl =
     `https://api.openweathermap.org/data/2.5/weather?q=${seacrhInput.value}&appid=0c82e3d9689abed74d1ce4e8c98ed561&units=metric`;
     function showTemperature(response){
+        console.log(response)
+        let weatherDescription = response.data.weather[0].description; 
+        let chosenDescriontion = document.querySelector("#description")
+        chosenDescriontion.innerHTML = weatherDescription; 
         let temp = response.data.main.temp;
-         
         let chosenTemp = document.querySelector("#tempSwitcher")
         chosenTemp.innerHTML =  Math.round(temp);
+        let chosenHumidity = document.querySelector("#humidity")
+        let weatherHumidity = response.data.main.humidity;
+        chosenHumidity.innerHtml = weatherHumidity; 
 
     }
     axios.get(apiUrl).then(showTemperature);
