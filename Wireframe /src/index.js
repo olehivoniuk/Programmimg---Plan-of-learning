@@ -10,23 +10,25 @@ lineDate.innerHTML = day + " " + hours + ":" + minutes;
 
 
 let apiKey = "0c82e3d9689abed74d1ce4e8c98ed561";
-let city = document.querySelector("#dataInput")
-let apiUrl =
-  `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0c82e3d9689abed74d1ce4e8c98ed561&units=metric`;
+
 
 function search (event){
     event.preventDefault();
+    let seacrhInput = document.querySelector("#dataInput");
+    
     let h3 = document.querySelector("h3");
-    if (city.value){
-        h3.innerHTML = city.value ;
+    if (seacrhInput.value ){
+        h3.innerHTML = seacrhInput.value 
     } else {
         alert("Please type the city")
     }
-
+    let apiUrl =
+    `https://api.openweathermap.org/data/2.5/weather?q=${seacrhInput.value}&appid=0c82e3d9689abed74d1ce4e8c98ed561&units=metric`;
     function showTemperature(response){
-        let currentCity = response.data.main.temp;
+        let temp = response.data.main.temp;
+         
         let chosenTemp = document.querySelector("#tempSwitcher")
-        chosenTemp.innerHTML = Math.round(currentCity);
+        chosenTemp.innerHTML =  Math.round(temp);
 
     }
     axios.get(apiUrl).then(showTemperature);
