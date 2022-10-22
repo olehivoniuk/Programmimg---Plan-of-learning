@@ -16,6 +16,10 @@
     bottom: 700px
     
 }
+#additions{
+    text-transform: capitalize;
+    color: greenyellow;
+}
 
 .precipitation {
     color: gold;
@@ -43,7 +47,6 @@
     position: relative;
     bottom: 700px;
     left: 800px;
-    color: antiquewhite;
 }
 .card{
     margin-top: 50px;
@@ -52,7 +55,7 @@
     position: relative; 
     left: 50px;
     bottom: 350px;
-    color: antiquewhite;
+    color: gold;
 }
 img{
     position: relative;
@@ -76,4 +79,7 @@ img{
 a:link{
     text-decoration: none;
 }
-    
+   .daySunday, .dayMonday, .dayTuesday, .dayWednesday, .dayThursday {
+       background-color: green;
+       color: aquamarine;
+   }
