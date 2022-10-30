@@ -47,43 +47,31 @@ function searchCity (event){
     axios.get(apiUrl).then(showTemperature);
 
 }
+let form = document.querySelector("#citySearch")
+form.addEventListener("submit", searchCity)
+
+
+
 
 
 
 function searchLocation (position){
     let apiKey = "0c82e3d9689abed74d1ce4e8c98ed561";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}`
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`
 console.log(apiUrl)
 
 function showTemperature(response){
     let currentCityName = document.querySelector("#currentCity")
     currentCityName.innerHTML = response.data.name ; 
 
-    let weatherDescription = response.data.weather[2].description; 
+    let weatherDescription = response.data.weather[2].description
         let chosenDescriontion = document.querySelector("#description")
         chosenDescriontion.innerHTML = weatherDescription; 
 
         let temp = response.data.main.temp;
         let chosenTemp = document.querySelector("#tempSwitcher")
         chosenTemp.innerHTML =  Math.round(temp);
-
-
-        let weatherHumidity = response.data.main.humidity;
-        let chosenHumidity = document.querySelector("#humidity")
-        chosenHumidity.innerHTML = weatherHumidity; 
-
-        let windSpeed = response.data.wind.speed;
-        let chosenSpeed = document.querySelector("#speed")
-        chosenSpeed.innerHTML = Math.round(windSpeed);
-
-
-
-
-
-
 }
-
-
 axios.get(apiUrl).then(showTemperature);
 }
 
@@ -91,11 +79,8 @@ function getCurrentLocation(event) {
     event.preventDefault();
     navigator.geolocation.getCurrentPosition(searchLocation) 
 }
-
-let form = document.querySelector("#citySearch")
-form.addEventListener("submit", searchCity)
 let currentLocationButton = document.querySelector("#current-button")
-currentLocation.addEventListener("click", getCurrentLocation)
+currentLocationButton.addEventListener("click", getCurrentLocation)
 
 
 
