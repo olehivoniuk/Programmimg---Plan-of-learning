@@ -11,8 +11,7 @@ lineDate.innerHTML = day + " " + hours + ":" + minutes;
 
 let apiKey = "0c82e3d9689abed74d1ce4e8c98ed561";
 
-
-function search (event){
+function searchCity (event){
     event.preventDefault();
     let seacrhInput = document.querySelector("#dataInput");
     
@@ -25,7 +24,6 @@ function search (event){
     let apiUrl =
     `https://api.openweathermap.org/data/2.5/weather?q=${seacrhInput.value}&appid=0c82e3d9689abed74d1ce4e8c98ed561&units=metric`;
     function showTemperature(response){
-        console.log(response)
         let weatherDescription = response.data.weather[0].description; 
         let chosenDescriontion = document.querySelector("#description")
         chosenDescriontion.innerHTML = weatherDescription; 
@@ -42,25 +40,82 @@ function search (event){
         console.log(windSpeed)
         let chosenSpeed = document.querySelector("#speed")
         chosenSpeed.innerHTML = Math.round(windSpeed);
+        
 
 
     }
     axios.get(apiUrl).then(showTemperature);
 
 }
+
+
+
+function searchLocation (position){
+    let apiKey = "0c82e3d9689abed74d1ce4e8c98ed561";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}`
+console.log(apiUrl)
+
+function showTemperature(response){
+    let currentCityName = document.querySelector("#currentCity")
+    currentCityName.innerHTML = response.data.name ; 
+
+    let weatherDescription = response.data.weather[2].description; 
+        let chosenDescriontion = document.querySelector("#description")
+        chosenDescriontion.innerHTML = weatherDescription; 
+
+        let temp = response.data.main.temp;
+        let chosenTemp = document.querySelector("#tempSwitcher")
+        chosenTemp.innerHTML =  Math.round(temp);
+
+
+        let weatherHumidity = response.data.main.humidity;
+        let chosenHumidity = document.querySelector("#humidity")
+        chosenHumidity.innerHTML = weatherHumidity; 
+
+        let windSpeed = response.data.wind.speed;
+        let chosenSpeed = document.querySelector("#speed")
+        chosenSpeed.innerHTML = Math.round(windSpeed);
+
+
+
+
+
+
+}
+
+
+axios.get(apiUrl).then(showTemperature);
+}
+
+function getCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchLocation) 
+}
+
 let form = document.querySelector("#citySearch")
-form.addEventListener("submit", search)
+form.addEventListener("submit", searchCity)
+let currentLocationButton = document.querySelector("#current-button")
+currentLocation.addEventListener("click", getCurrentLocation)
+
+
+
+
+
+
+
+
+
+
+
+
 
 function switchTemp(event){
     event.preventDefault();
     let tempertarure = document.querySelector("#tempSwitcher") ;
     tempertarure.innerHTML = "19" ;
-    
 }
-
 let tempCelcius = document.querySelector("#celcius");
 tempCelcius.addEventListener("click",switchTemp);
-
 function changeTemp(event){
     event.preventDefault();
     let degrees = document.querySelector("#tempSwitcher");
