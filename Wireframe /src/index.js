@@ -64,22 +64,22 @@ function showTemperature(response){
     let currentCityName = document.querySelector("#currentCity")
     currentCityName.innerHTML = response.data.name ; 
 
-    let weatherDescription = response.data.weather[2].description ;
-        let chosenDescriontion = document.querySelector("#description");
-        chosenDescriontion.innerHTML = weatherDescription; 
+    let weatherDescriptionCurrent = response.data.weather[2].description ;
+        let chosenDescriontionCurrent = document.querySelector("#description");
+        chosenDescriontionCurrent.innerHTML = weatherDescriptionCurrent; 
 
-        let temper = response.data.main.temp;
-        let chosenTemp = document.querySelector("#tempSwitcher")
-        chosenTemp.innerHTML =  Math.round(temper);
+        let tempCurrent = response.data.main.temp;
+        let chosenTempCurrent = document.querySelector("#tempSwitcher")
+        chosenTempCurrent.innerHTML =  Math.round(tempCurrent);
 
-        let weatherHumidity = response.data.main[5].humidity;
-        let chosenHumidity = document.querySelector("#humidity")
-        chosenHumidity.innerHTML = weatherHumidity; 
+        let weatherHumidityCurrent = response.data.main[5].humidity;
+        let chosenHumidityCurrent = document.querySelector("#humidity")
+        chosenHumidity.innerHTMLCurrent = weatherHumidityCurrent; 
 
-        let windSpeed = response.data.wind.speed;
-        console.log(windSpeed)
-        let chosenSpeed = document.querySelector("#speed")
-        chosenSpeed.innerHTML = Math.round(windSpeed);
+        let windSpeedCurrent = response.data.wind.speed;
+        console.log(windSpeedCurrent)
+        let chosenSpeedCurrent = document.querySelector("#speed")
+        chosenSpeedCurrent.innerHTML = Math.round(windSpeedCurrent);
 }
 axios.get(apiUrl).then(showTemperature);
 }
