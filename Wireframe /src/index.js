@@ -23,6 +23,8 @@ function searchCity (event){
     }
     let apiUrl =
     `https://api.openweathermap.org/data/2.5/weather?q=${seacrhInput.value}&appid=0c82e3d9689abed74d1ce4e8c98ed561&units=metric`;
+    console.log(apiUrl)
+
     function showTemperature(response){
         let weatherDescription = response.data.weather[0].description; 
         let chosenDescriontion = document.querySelector("#description")
@@ -56,15 +58,14 @@ form.addEventListener("submit", searchCity)
 
 
 function searchLocation (position){
+    
     let apiKey = "0c82e3d9689abed74d1ce4e8c98ed561";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`
-console.log(apiUrl)
-
-function showTemperature(response){
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`
+function showTemperatureCurrent(response){
     let currentCityName = document.querySelector("#currentCity")
-    currentCityName.innerHTML = response.data.name ; 
+    currentCityName.innerHTML = response.data.name ;
 
-    let weatherDescriptionCurrent = response.data.weather[2].description ;
+    let weatherDescriptionCurrent = response.data.weather[1].main ;
         let chosenDescriontionCurrent = document.querySelector("#description");
         chosenDescriontionCurrent.innerHTML = weatherDescriptionCurrent; 
 
@@ -81,7 +82,7 @@ function showTemperature(response){
         let chosenSpeedCurrent = document.querySelector("#speed")
         chosenSpeedCurrent.innerHTML = Math.round(windSpeedCurrent);
 }
-axios.get(apiUrl).then(showTemperature);
+axios.get(apiUrl).then(showTemperatureCurrent);
 }
 
 function getCurrentLocation(event) {
