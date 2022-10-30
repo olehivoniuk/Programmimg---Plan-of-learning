@@ -105,7 +105,6 @@ currentLocationButton.addEventListener("click", getCurrentLocation)
 
 
 
-
 function switchTemp(event){
     event.preventDefault();
     let tempertarure = document.querySelector("#tempSwitcher") ;
