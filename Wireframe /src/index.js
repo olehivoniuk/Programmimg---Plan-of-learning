@@ -64,13 +64,17 @@ function showTemperature(response){
     let currentCityName = document.querySelector("#currentCity")
     currentCityName.innerHTML = response.data.name ; 
 
-    let weatherDescription = response.data.weather[2].description
+    let weatherDescription = response.data.weather[1].main  
         let chosenDescriontion = document.querySelector("#description")
         chosenDescriontion.innerHTML = weatherDescription; 
 
         let temp = response.data.main.temp;
         let chosenTemp = document.querySelector("#tempSwitcher")
         chosenTemp.innerHTML =  Math.round(temp);
+
+        let weatherHumidity = response.data.main[5].humidity;
+        let chosenHumidity = document.querySelector("#humidity")
+        chosenHumidity.innerHTML = weatherHumidity; 
 }
 axios.get(apiUrl).then(showTemperature);
 }
