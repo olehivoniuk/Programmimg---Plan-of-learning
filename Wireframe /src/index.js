@@ -65,7 +65,7 @@ function showTemperatureCurrent(response){
     let currentCityName = document.querySelector("#currentCity")
     currentCityName.innerHTML = response.data.name ;
 
-    let weatherDescriptionCurrent = response.data.weather[1].main ;
+    let weatherDescriptionCurrent = response.data.weather[0].description;
         let chosenDescriontionCurrent = document.querySelector("#description");
         chosenDescriontionCurrent.innerHTML = weatherDescriptionCurrent; 
 
@@ -73,9 +73,9 @@ function showTemperatureCurrent(response){
         let chosenTempCurrent = document.querySelector("#tempSwitcher")
         chosenTempCurrent.innerHTML =  Math.round(tempCurrent);
 
-        let weatherHumidityCurrent = response.data.main[5].humidity;
+        let weatherHumidityCurrent = response.data.main.humidity;
         let chosenHumidityCurrent = document.querySelector("#humidity")
-        chosenHumidity.innerHTMLCurrent = weatherHumidityCurrent; 
+        chosenHumidityCurrent.innerHTML = weatherHumidityCurrent; 
 
         let windSpeedCurrent = response.data.wind.speed;
         console.log(windSpeedCurrent)
